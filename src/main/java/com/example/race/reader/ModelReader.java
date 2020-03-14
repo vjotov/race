@@ -1,9 +1,6 @@
 package com.example.race.reader;
 
-import com.example.race.domain.RacerInfo;
-import com.example.race.parser.ModelParser;
 import com.opencsv.CSVReader;
-
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -17,7 +14,7 @@ public abstract class ModelReader {
         this.fileName = fileName;
     }
 
-    public Map<String, Object> readFile(ModelParser parser) throws IOException{
+    public Map<String, Object> readFile() throws IOException{
         Map<String, Object> result = new HashMap<>();
         File file = new File(
                 getClass().getClassLoader().getResource(fileName).getFile()
