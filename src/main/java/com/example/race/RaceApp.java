@@ -1,5 +1,6 @@
 package com.example.race;
 
+import com.example.race.domain.RacerInfo;
 import com.example.race.reader.AbbreviationReader;
 import com.example.race.reader.ModelReader;
 import com.example.race.reader.ModelReaderFactory;
@@ -23,18 +24,9 @@ public class RaceApp {
         }
         catch (Exception ex){}
 
-//        racerInfoMap.entrySet().stream()
-//                .forEach(<k,v> -> {});
+        racerInfoMap
+                .forEach((k,v) -> ((RacerInfo)v).calculateTimeLap());
 
-//        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("YYYY-MM-dd_HH:mm:ss.SSS");
-//        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss.SSS");
-//        TemporalAccessor ta1 = dtf.parse("12:02:50.917");
-//        Instant t1 = Instant.from(ta1);
-////        Instant t1 = Instant.from(dtf.parse("2018-05-24_12:02:50.917"));
-////        Instant t2 = Instant.from(dtf.parse("2018-05-24_12:03:38.917"));
-//        TemporalAccessor ta2 =  dtf.parse("12:03:38.917");
-//        Instant t2 = Instant.from(ta2);
-//        String myDateString = ;
         LocalTime t1 = LocalTime.parse("12:03:53.917", DateTimeFormatter.ofPattern(""));
         LocalTime t2 = LocalTime.parse("12:02:50.903", DateTimeFormatter.ofPattern("HH:mm:ss.SSS"));
 
