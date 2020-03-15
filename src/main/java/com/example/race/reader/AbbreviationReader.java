@@ -5,8 +5,8 @@ import com.example.race.domain.RacerInfo;
 import java.util.Map;
 
 public class AbbreviationReader extends ModelReader {
-    public AbbreviationReader(String fileName) {
-        super(fileName);
+    public AbbreviationReader(String fileName, Map<String,Object> result) {
+        super(fileName, result);
     }
 
     @Override
