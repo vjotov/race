@@ -11,6 +11,7 @@ public class ModelReaderFactory {
     final static String START_FILENAME = "start.log";
     final static String END_FILENAME = "end.log";
 
+    @SuppressWarnings("unchecked")
     public static ModelReader getReader(String readerName, Map<String,Object> result) {
         if(ABBREVIATION.equals(readerName)) {
             return new AbbreviationReader(ABBR_FILENAME,result);

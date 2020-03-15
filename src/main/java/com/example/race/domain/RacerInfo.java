@@ -61,4 +61,8 @@ public class RacerInfo {
     public void setEndTime(LocalTime endTime) {
         this.endTime = endTime;
     }
+
+    public Duration getLapTime() {
+        return lapTime;
+    }
 }
