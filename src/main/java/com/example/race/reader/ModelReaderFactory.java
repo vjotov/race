@@ -5,13 +5,13 @@ import com.example.race.domain.RacerInfo;
 import java.util.Map;
 
 public class ModelReaderFactory {
-    static final private String ABBREVIATION = "Abbreviation";
-    static final private String START_TIME = "Start Time";
-    static final private String END_TIME = "End Time";
+    private static final String ABBREVIATION = "Abbreviation";
+    private static final String START_TIME = "Start Time";
+    private static final String END_TIME = "End Time";
 
-    static final private String ABBR_FILENAME = "abbreviations.txt";
-    static final private String START_FILENAME = "start.log";
-    static final private String END_FILENAME = "end.log";
+    private static final String ABBR_FILENAME = "abbreviations.txt";
+    private static final String START_FILENAME = "start.log";
+    private static final String END_FILENAME = "end.log";
 
     @SuppressWarnings("unchecked")
     public static ModelReader getReader(String readerName, Map<String, RacerInfo> result) {
@@ -27,4 +27,6 @@ public class ModelReaderFactory {
 
         return null;
     }
+
+    private ModelReaderFactory() {}
 }
