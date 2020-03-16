@@ -20,7 +20,7 @@ public class RacerInfo {
 
     public void calculateTimeLap(){
         lapTime = Duration.between(startTime, endTime);
-    };
+    }
 
     public String getAbbreviation() {
         return abbreviation;

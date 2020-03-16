@@ -6,7 +6,7 @@ import java.time.LocalTime;
 import java.util.Map;
 
 public class EndTimeReader extends TimeReader {
-    public EndTimeReader(String fileName, Map<String,Object> result) {
+    public EndTimeReader(String fileName, Map<String,RacerInfo> result) {
         super(fileName,result);
     }
     @Override

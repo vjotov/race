@@ -6,8 +6,8 @@ import java.time.LocalTime;
 import java.util.Map;
 
 public class StartTimeReader extends TimeReader {
-    public StartTimeReader(String fileName, Map<String,Object> result) {
-        super(fileName,result);
+    public StartTimeReader(String fileName, Map<String, RacerInfo> result) {
+        super(fileName, result);
     }
 
     @Override

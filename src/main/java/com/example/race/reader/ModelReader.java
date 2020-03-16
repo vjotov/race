@@ -1,5 +1,6 @@
 package com.example.race.reader;
 
+import com.example.race.domain.RacerInfo;
 import com.opencsv.CSVReader;
 import java.io.File;
 import java.io.FileReader;
@@ -8,9 +9,9 @@ import java.util.Map;
 
 public abstract class ModelReader {
     private String fileName;
-    private Map<String, Object> result;
+    private Map<String, RacerInfo> result;
 
-    public ModelReader(String fileName, Map<String, Object> result) {
+    public ModelReader(String fileName, Map<String, RacerInfo> result) {
         if (fileName == null) {
             throw new IllegalArgumentException("FileName can't be null");
         }
@@ -21,7 +22,7 @@ public abstract class ModelReader {
         this.result = result;
     }
 
-    public Map<String, Object> readFile() throws IOException {
+    public Map<String, RacerInfo> readFile() throws IOException {
         File file = new File(
                 getClass().getClassLoader().getResource(fileName).getFile()
         );
@@ -34,7 +35,7 @@ public abstract class ModelReader {
         return result;
     }
 
-    protected void modelParse(Map<String, Object> result, String[] args) {
+    protected void modelParse(Map<String, RacerInfo> result, String[] args) {
 
     }
 }
