@@ -1,14 +1,10 @@
 package com.example.race;
 
-import com.example.race.domain.RacerInfo;
 import com.example.race.formater.Formater;
 import com.example.race.formater.FormaterFactory;
 import com.example.race.formater.FormaterImpl;
-import com.example.race.reader.*;
-import org.junit.jupiter.api.Test;
 
-import java.util.HashMap;
-import java.util.Map;
+import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.MatcherAssert.assertThat;

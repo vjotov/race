@@ -2,7 +2,6 @@ package com.example.race;
 
 import com.example.race.domain.RacerInfo;
 import com.example.race.reader.*;
-import org.hamcrest.core.IsInstanceOf;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
