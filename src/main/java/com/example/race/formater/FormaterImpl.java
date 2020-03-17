@@ -16,6 +16,10 @@ public class FormaterImpl implements Formater {
 
     @Override
     public String format(List<RacerInfo> racerInfoList) {
+        if(racerInfoList == null) {
+            throw new IllegalArgumentException("racerInfoList cannot be null");
+        }
+
         AtomicInteger index = new AtomicInteger();
 
         return racerInfoList.stream()

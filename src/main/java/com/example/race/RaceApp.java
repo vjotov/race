@@ -32,8 +32,6 @@ public class RaceApp {
         Formater formater = FormaterFactory.getDefault();
         String lines = formater.format(finalResult);
         System.out.println(lines);
-
-
     }
 
 }
