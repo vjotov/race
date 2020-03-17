@@ -12,15 +12,11 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class FormatterFactoryTest {
-    @Test
-    public void WrongFactoryName() {
-        Formater formater = FormaterFactory.getFormater("worng reader");
-        assertNull(formater);
-    }
+
 
     @Test
     public void AbbreviationReader() {
-        Formater formater = FormaterFactory.getFormater("Normal");
+        Formater formater = FormaterFactory.getDefault();
 
         assertNotNull(formater);
         assertThat(formater, instanceOf(FormaterImpl.class));

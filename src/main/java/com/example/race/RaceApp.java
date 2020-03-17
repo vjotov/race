@@ -29,7 +29,7 @@ public class RaceApp {
         Util.calculateLapTimes(racerInfoMap);
         List<RacerInfo> finalResult = Util.toStringRacerInfo(racerInfoMap);
 
-        Formater formmater = FormaterFactory.getFormater("Normal");
+        Formater formmater = FormaterFactory.getDefault();
         String lines = formmater.format(finalResult);
         System.out.println(lines);
 
