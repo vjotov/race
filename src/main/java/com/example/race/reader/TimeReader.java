@@ -18,7 +18,7 @@ public abstract class TimeReader extends ModelReader {
     @Override
     protected void modelParse(Map<String, RacerInfo> result, String[] args) {
         String key = args[0].substring(0, 3);
-        RacerInfo racer = (RacerInfo) result.get(key);
+        RacerInfo racer = result.get(key);
         LocalTime timeResult = LocalTime.parse(args[1], DateTimeFormatter.ofPattern(DATETIME_PATTERN));
         updateRacer(racer, timeResult);
     }
