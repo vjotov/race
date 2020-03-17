@@ -11,12 +11,13 @@ import java.util.stream.Collectors;
 public class FormaterImpl implements Formater {
     private static final String LINE_PATTERN = "%2d. %-20s | %-25s | %-8s";
     private static final String TIME_PATTERN = "mm:ss,SSS";
-    private static final String TOP_N_SEPARATOR = "\n----------------------------------------------------------------";
+    private static final String TOP_N_SEPARATOR = "%n----------------------------------------------------------------";
     private static final int TOP_N = 15;
 
     @Override
     public String format(List<RacerInfo> racerInfoList) {
         AtomicInteger index = new AtomicInteger();
+
         return racerInfoList.stream()
                 .map(racer ->
                         String.format(LINE_PATTERN,
@@ -26,7 +27,7 @@ public class FormaterImpl implements Formater {
                                 DurationFormatUtils.formatDuration(racer.getLapTime().toMillis(), TIME_PATTERN)
                         )
                 )
-                .map(str -> index.get() == 15 ? (str + TOP_N_SEPARATOR) : str)
+                .map(str -> index.get() == 15 ? (str + String.format(TOP_N_SEPARATOR)) : str)
                 .collect(Collectors.joining("\n"));
     }
 }

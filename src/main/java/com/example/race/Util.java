@@ -12,6 +12,10 @@ class Util {
     }
 
     static List<RacerInfo> toStringRacerInfo(Map<String, RacerInfo> source) {
+        if(source == null) {
+            throw new IllegalArgumentException("source cannot be null");
+        }
+
         Comparator<Map.Entry<String, RacerInfo>> comparator = Comparator.comparing(entry -> entry.getValue().getLapTime());
 
         return source
@@ -23,6 +27,10 @@ class Util {
     }
 
     static void calculateLapTimes(Map<String, RacerInfo> racerInfoMap) {
+        if(racerInfoMap == null) {
+            throw new IllegalArgumentException("racerInfoMap cannot be null");
+        }
+
         racerInfoMap
                 .forEach((k, v) -> (v).calculateTimeLap()
                 );
