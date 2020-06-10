@@ -26,7 +26,6 @@ public abstract class ModelReader {
         File file = new File(
                 getClass().getClassLoader().getResource(fileName).getFile()
         );
-
         CSVReader csvReader = new CSVReader(new FileReader(file), '_');
         String[] line;
         while ((line = csvReader.readNext()) != null) {
